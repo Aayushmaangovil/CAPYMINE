@@ -99,10 +99,10 @@
 </head>
 <body>
   <header>
-    <h1><a href="welcome.html" style="text-decoration:none; color:#d4af37; font-family: 'Playfair Display', serif; cursor:pointer;">CAPYMINE</a></h1>
+<a href="welcome.html" style="text-decoration:none; color:#d4af37; font-family: 'Playfair Display', serif; cursor:pointer;">CAPYMINE</a>
     <nav>
-      <a href="welcome.html">Welcome</a>
-      <a href="index.html">Main</a>
+<a href="welcome.html">Welcome</a>
+<a href="index.html">Main</a>
       <a href="login.html" id="loginSignupLink">Login/Signup</a>
       <a href="cart.html">Cart</a>
       <a href="#" id="logoutLink" style="display:none; color:#d4af37; cursor:pointer; font-weight:600;">Logout</a>
@@ -130,38 +130,38 @@
   <section class="hero" id="hero">
     <h2>Discover Timeless Elegance</h2>
     <p>Jewelry that tells your story</p>
-    <button class="cta-button" onclick="location.href='Main.html#products'">Shop Now</button>
+<button class="cta-button" onclick="location.href='index.html#products'">Shop Now</button>
   </section>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const mainLink = document.querySelector('nav a[href="Main.html"]');
-      if (mainLink) {
-        mainLink.addEventListener('click', (e) => {
-          e.preventDefault();
+const mainLink = document.querySelector('nav a[href="index.html"]');
+if (mainLink) {
+  mainLink.addEventListener('click', (e) => {
+    e.preventDefault();
 
-          // Custom smooth scroll function
-          const scrollDistance = 1000;
-          const scrollDuration = 1500;
-          const start = window.pageYOffset;
-          const startTime = performance.now();
+    // Custom smooth scroll function
+    const scrollDistance = 1000;
+    const scrollDuration = 1500;
+    const start = window.pageYOffset;
+    const startTime = performance.now();
 
-          function smoothScroll(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / scrollDuration, 1);
-            const easeInOut = progress < 0.5
-              ? 2 * progress * progress
-              : -1 + (4 - 2 * progress) * progress;
-            window.scrollTo(0, start + scrollDistance * easeInOut);
-            if (elapsed < scrollDuration) {
-              requestAnimationFrame(smoothScroll);
-            } else {
-              window.location.href = 'Main.html#products';
-            }
-          }
-
-          requestAnimationFrame(smoothScroll);
-        });
+    function smoothScroll(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / scrollDuration, 1);
+      const easeInOut = progress < 0.5
+        ? 2 * progress * progress
+        : -1 + (4 - 2 * progress) * progress;
+      window.scrollTo(0, start + scrollDistance * easeInOut);
+      if (elapsed < scrollDuration) {
+        requestAnimationFrame(smoothScroll);
+      } else {
+        window.location.href = 'index.html#products';
       }
+    }
+
+    requestAnimationFrame(smoothScroll);
+  });
+}
     });
   </script>
 </body>

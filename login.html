@@ -137,12 +137,12 @@
 </head>
 <body>
   <header>
-    <h1><a href="Main.html" style="text-decoration: none; color: #d4af37;">CAPYMINE</a></h1>
-    <nav>
-      <a href="Main.html">Home</a>
-      <a href="login.html">Login</a>
-      <a href="cart.html">Cart</a>
-    </nav>
+<h1><a href="index.html" style="text-decoration: none; color: #d4af37;">CAPYMINE</a></h1>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="login.html">Login</a>
+  <a href="cart.html">Cart</a>
+</nav>
   </header>
   <div class="login-wrapper">
     <div class="login-container">
@@ -188,7 +188,7 @@
         // Set loggedIn flag in localStorage
         localStorage.setItem('loggedIn', 'true');
         // Redirect to main page or dashboard
-        window.location.href = 'Main.html';
+window.location.href = 'index.html';
       } else {
         errorMessage.textContent = 'Invalid email or password.';
         errorMessage.style.display = 'block';
